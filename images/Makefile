@@ -7,8 +7,8 @@ help:
 
 all: help
 
-%.png: %.svg 
-	@inkscape -z -C -w 1890 -e $@ $<
+%.png: %.svg
+	@inkscape --without-gui --export-area-page --export-width=1890 --export-png=$@ $<
 
 %.jpg: %.png
 	@convert $< $@
