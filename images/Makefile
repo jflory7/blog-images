@@ -8,7 +8,7 @@ help:
 all: help
 
 %.png: %.svg
-	@inkscape --without-gui --export-area-page --export-width=1890 --export-png=$@ $<
+	@inkscape --without-gui --export-area-page --export-width=1890 --export-file=$@ $<
 
 %.jpg: %.png
 	@convert $< $@
